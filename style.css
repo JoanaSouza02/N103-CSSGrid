@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+}
+
+#main{
+    display: grid;
+    grid-template-areas: 'header header header'
+                         'nav nav aside'
+                         'section section aside'
+                         'footer footer footer';
+    grid-auto-rows: 10vh 20vh 50vh 40vh;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+header{
+    grid-area: header;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header a{
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header a:nth-child(odd){
+    color: black;
+}
+
+nav{
+    grid-area: nav;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav h1{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+aside{
+    grid-area: aside;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+aside p{
+    width: 300px;
+    color: white;
+
+}
+
+section{
+    grid-area: section;
+    background-color: yellow;
+    height: 90%;
+}
+
+section img{
+    height: 100%;
+}
+
+footer{
+    grid-area: footer;
+    background-color: deeppink;
+}
